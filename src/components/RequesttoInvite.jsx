@@ -22,7 +22,6 @@ function RequesttoInvite() {
 
       setIsSubmitting(false);
 
-      window.location.reload();
     }, 5000);
   };
 

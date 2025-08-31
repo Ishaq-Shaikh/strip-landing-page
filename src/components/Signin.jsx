@@ -19,7 +19,6 @@ function Signin() {
     setTimeout(() => {
       alert("🎉 Your account has been created successfully!");
       setIsSubmitting(false);
-      window.location.reload();
     }, 3000);
   };
 

@@ -25,7 +25,6 @@ function Contactsales() {
     console.log("Form Data:", data);
 
     setIsSubmitting(false);
-
     navigate(0);
   }, 5000);
 };

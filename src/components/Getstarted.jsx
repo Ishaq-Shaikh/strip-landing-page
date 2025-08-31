@@ -17,7 +17,6 @@ const Getstarted = () => {
     setTimeout(() => {
       alert("🎉 Your account has been created successfully!");
       setIsSubmitting(false);
-      window.location.reload();
     }, 3000);
   };
 
@@ -119,7 +118,7 @@ const Getstarted = () => {
               {...register("country", {
                 required: "Please select your country",
               })}
-              className="my-2 h-[40px] w-[70vw] rounded px-2 border border-[#414551] hover:border-2 focus:border-blue-300 outline-none sm:w-[60vw] md:w-[40vw]" 
+              className="my-2 h-[40px] w-[70vw] rounded px-2 border border-[#414551] hover:border-2 focus:border-blue-300 outline-none sm:w-[60vw] md:w-[40vw]"
             >
               <option value="">Choose a country...</option>
               <option value="IN">🇮🇳 India</option>
