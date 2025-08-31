@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Contactsales() {
   const {
@@ -10,21 +11,24 @@ function Contactsales() {
   } = useForm();
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+    const navigate = useNavigate();
+
 
   const onSubmit = (data) => {
-    setIsSubmitting(true);
+  setIsSubmitting(true);
 
-    setTimeout(() => {
-      alert(
-        "Success! We've received your information and will be in touch shortly."
-      );
-      console.log("Form Data:", data);
 
-      setIsSubmitting(false);
+  setTimeout(() => {
+    alert(
+      "Success! We've received your information and will be in touch shortly."
+    );
+    console.log("Form Data:", data);
 
-      window.location.reload();
-    }, 5000);
-  };
+    setIsSubmitting(false);
+
+    navigate(0);
+  }, 5000);
+};
 
   return (
     <>
