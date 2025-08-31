@@ -1,3 +1,4 @@
+import { HashRouter } from "react-router-dom";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
@@ -138,9 +139,9 @@ let router = createBrowserRouter([
 
 function App() {
   return (
-    <div>
+    <HashRouter>
       <RouterProvider router={router} />
-    </div>
+    </HashRouter>
   );
 }
 
