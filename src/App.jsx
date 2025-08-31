@@ -1,5 +1,4 @@
-import { HashRouter } from "react-router-dom";
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Products from "./components/Products";
@@ -14,133 +13,24 @@ import RequesttoInvite from "./components/RequesttoInvite";
 import Getstarted from "./components/Getstarted";
 import Opens from "./components/Opens";
 
-let router = createBrowserRouter([
-  {
-    path: "/",
-    element: (
-      <div>
-        <Navbar />
-        <Home />
-      </div>
-    ),
-  },
-
-  {
-    path: "/products",
-    element: (
-      <div>
-        <Navbar />
-        <Products />
-      </div>
-    ),
-  },
-
-  {
-    path: "/solutions",
-    element: (
-      <div>
-        <Navbar />
-        <Solutions />
-      </div>
-    ),
-  },
-
-  {
-    path: "/developers",
-    element: (
-      <div>
-        <Navbar />
-        <Developers />
-      </div>
-    ),
-  },
-
-  {
-    path: "/resources",
-    element: (
-      <div>
-        <Navbar />
-        <Resources />
-      </div>
-    ),
-  },
-
-  {
-    path: "/pricing",
-    element: (
-      <div>
-        <Navbar />
-        <Pricing />
-      </div>
-    ),
-  },
-
-  {
-    path: "/signin",
-    element: (
-      <div>
-        <Navbar />
-        <Signin />
-      </div>
-    ),
-  },
-
-  {
-    path: "/startnow",
-    element: (
-      <div>
-        <Navbar />
-        <Startnow />
-      </div>
-    ),
-  },
-
-  {
-    path: "/contactsales",
-    element: (
-      <div>
-        <Navbar />
-        <Contactsales />
-      </div>
-    ),
-  },
-
-  {
-    path: "/requesttoinvite",
-    element: (
-      <div>
-        <Navbar />
-        <RequesttoInvite />
-      </div>
-    ),
-  },
-
-  {
-    path: "/getstarted",
-    element: (
-      <div>
-        <Navbar />
-        <Getstarted />
-      </div>
-    ),
-  },
-
-  {
-    path: "/opens",
-    element: (
-      <div>
-        <Navbar />
-        <Opens />
-      </div>
-    ),
-  },
-
-]);
-
 function App() {
   return (
     <HashRouter>
-      <RouterProvider router={router} />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/solutions" element={<Solutions />} />
+        <Route path="/developers" element={<Developers />} />
+        <Route path="/resources" element={<Resources />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/startnow" element={<Startnow />} />
+        <Route path="/contactsales" element={<Contactsales />} />
+        <Route path="/requesttoinvite" element={<RequesttoInvite />} />
+        <Route path="/getstarted" element={<Getstarted />} />
+        <Route path="/opens" element={<Opens />} />
+      </Routes>
     </HashRouter>
   );
 }
