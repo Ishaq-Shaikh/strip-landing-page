@@ -28,6 +28,12 @@ Deployed live using **Render** 🔥
 
 ---
 
+## 📝 License
+© 2025 Shaikh Ishaq. All rights reserved.  
+This project is made only for **educational purposes** and has no affiliation with **Stripe**.
+
+---
+
 ## 📂 Project Setup
 
 Clone the repository:
